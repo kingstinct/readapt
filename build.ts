@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+import Bun from 'bun'
 import { readdirSync, statSync } from 'node:fs'
 import { join } from 'node:path'
 

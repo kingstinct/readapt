@@ -5,6 +5,7 @@
     "dbaeumer.vscode-eslint",
     "streetsidesoftware.code-spell-checker",
     "graphql.vscode-graphql-syntax",
-    "graphql.vscode-graphql"
+    "graphql.vscode-graphql",
+    "biomejs.biome",
   ]
 }

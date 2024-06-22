@@ -1,7 +1,8 @@
 {
   "extends": "./packages/eslint/tsconfig.base.json",
   "compilerOptions": {
-    "types": [ "bun-types" ]
+    "types": [ "bun-types" ],
+    "noPropertyAccessFromIndexSignature": false
   },
   "exclude": [
     "**/*.generated/*.ts",

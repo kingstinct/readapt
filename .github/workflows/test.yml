@@ -180,6 +180,32 @@ jobs:
 
       - name: Lint
         run: bun run lint --quiet
+  
+  biome:
+    # The type of runner that the job will run on
+    runs-on: ${{ inputs.os || 'ubuntu-latest' }}
+    timeout-minutes: 10
+    env:
+      MONGOMS_DISABLE_POSTINSTALL: true
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+        id: checkout
+
+      - uses: cardinalby/export-env-action@v2
+        with:
+          envFile: .env.github
+
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: ${{ inputs.bun-version || env.BUN_VERSION }}
+
+      - run: bun install --ignore-scripts
+
+      - name: Biome
+        run: bun run biome
 
   codegen:
     # The type of runner that the job will run on

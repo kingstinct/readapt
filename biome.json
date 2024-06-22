@@ -1,0 +1,51 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.8.2/schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space"
+  },
+  "json": {
+    "formatter": {
+      "indentStyle": "space"
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "single",
+      "quoteStyle": "single",
+      "semicolons": "asNeeded",
+      "trailingCommas": "all"
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "all": true,
+      "style": {
+        "noDefaultExport": "off"
+      },
+      "correctness": {
+        "noNodejsModules": "off"
+      },
+      "complexity": {
+        "noVoid": "off"
+      },
+      "suspicious": {
+        "noExportsInTest": "off"
+      }
+    }
+  },
+  "files": {
+    "ignore": [
+      "**/*.generated.*",
+      "**/router.d.ts",
+      "**/*.generated/*.*"
+    ]
+  }
+}

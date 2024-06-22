@@ -9,6 +9,7 @@
     "typecheck": "bunx turbo run typecheck --continue",
     "codegen": "bunx turbo run codegen",
     "build": "bunx turbo run build",
+    "biome": "bunx biome check",
     "prepare": "husky install",
     "postinstall": "cp manual-patches/sofa-api/package.json node_modules/sofa-api/",
     "prepush": "bunx turbo run lint test typecheck --continue",
@@ -51,6 +52,7 @@
   "license": "ISC",
   "private": true,
   "devDependencies": {
+    "@biomejs/biome": "^1.8.2",
     "@graphql-eslint/eslint-plugin": "^3.20.1",
     "@graphql-typed-document-node/core": "^3.2.0",
     "@tsconfig/bun": "^1.0.5",
